@@ -52,6 +52,12 @@ Add "-e VARIABLE=value" to the above command:
 
 Generally you should set either EXTERNAL_IP or NOPASV, unless the container use host or macvlan networking.
 
+## Permanent storage
+
+Generally TrashBox is meant to be an "ad hoc" file storage, so most likely storing data in anonymous volume is enough.
+Alternatively - if you really wish - you may create an permanent volume and mount it in `/srv/trashbox` folder.
+Just add `-v volume_name:/srv/trashbox` to the command line.
+
 ## Access
 
 You may access the TrashBox via:
