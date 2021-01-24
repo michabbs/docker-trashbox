@@ -3,6 +3,7 @@
 if [ ! -z "$1" ]; then
     exec "$@"
 else
+    rm /nossl /nodav
     [ "$NOSSL" = "1" ] && touch /nossl
     [ "$NODAV" = "1" ] && touch /nodav
 
