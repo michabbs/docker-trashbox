@@ -56,7 +56,9 @@ Generally you should set either EXTERNAL_IP or NOPASV, unless the container use 
 
 Generally TrashBox is meant to be an "ad hoc" file storage, so most likely storing data in anonymous volume is enough.
 Alternatively - if you really wish - you may create an permanent volume and mount it in `/srv/trashbox` folder.
-Just add `-v volume_name:/srv/trashbox` to the command line.
+Just add `-v volume_name:/srv/trashbox` or `-v /path/to/your/local/folder:/srv/trashbox` to the command line.
+
+Of course the mount might be read only: `-v /path/to/your/local/folder:/srv/trashbox:ro` - this way you have out-of-the-box public file server!
 
 ## Access
 
